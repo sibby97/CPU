@@ -1,0 +1,41 @@
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Users/1997j/Documents/COA Lab/Assignment2_15CS30036_15CS30043/Assignment2_working/multicycle/testbench_isim_beh.exe" -prj "C:/Users/1997j/Documents/COA Lab/Assignment2_15CS30036_15CS30043/Assignment2_working/multicycle/testbench_beh.prj" "work.testbench" "work.glbl" 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Users/1997j/Documents/COA Lab/Assignment2_15CS30036_15CS30043/Assignment2_working/multicycle/datapath.v" into library work
+Analyzing Verilog file "C:/Users/1997j/Documents/COA Lab/Assignment2_15CS30036_15CS30043/Assignment2_working/multicycle/controller.v" into library work
+Analyzing Verilog file "C:/Users/1997j/Documents/COA Lab/Assignment2_15CS30036_15CS30043/Assignment2_working/multicycle/top.v" into library work
+Analyzing Verilog file "C:/Users/1997j/Documents/COA Lab/Assignment2_15CS30036_15CS30043/Assignment2_working/multicycle/memory.v" into library work
+Analyzing Verilog file "C:/Users/1997j/Documents/COA Lab/Assignment2_15CS30036_15CS30043/Assignment2_working/multicycle/testbench.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:97 - "C:/Users/1997j/Documents/COA Lab/Assignment2_15CS30036_15CS30043/Assignment2_working/multicycle/datapath.v" Line 153: ir4 was previously declared with a different range
+Completed static elaboration
+Compiling module controller
+Compiling module reg_16bit
+Compiling module reg_16bit_sp
+Compiling module reg_16bit_mdr
+Compiling module reg_16bit_ir
+Compiling module mux_1to8
+Compiling module mux_8to1
+Compiling module regbank
+Compiling module mux_2to1_3
+Compiling module mux_2to1_16
+Compiling module mux_5to1
+Compiling module functional_unit
+Compiling module flipflop
+Compiling module mux_16to1
+Compiling module status_selector
+Compiling module status_detector
+Compiling module datapath
+Compiling module top
+Compiling module memory
+Compiling module testbench
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 5 sub-compilation(s) to finish...
+Compiled 21 Verilog Units
+Built simulation executable C:/Users/1997j/Documents/COA Lab/Assignment2_15CS30036_15CS30043/Assignment2_working/multicycle/testbench_isim_beh.exe
+Fuse Memory Usage: 29540 KB
+Fuse CPU Usage: 812 ms

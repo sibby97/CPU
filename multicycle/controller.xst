@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/1997j/Documents/COA Lab/Assignment2_15CS30036_15CS30043/Assignment2_working/multicycle/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/1997j/Documents/COA Lab/Assignment2_15CS30036_15CS30043/Assignment2_working/multicycle/xst"
+elaborate
+-ifn controller.prj
+-ifmt mixed

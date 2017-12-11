@@ -1,0 +1,31 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Users/1997j/Documents/COA Lab/Assignment2_15CS30036_15CS30043/Assignment2_working/multicycle/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 3.94 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/1997j/Documents/COA Lab/Assignment2_15CS30036_15CS30043/Assignment2_working/multicycle/xst
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 3.94 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "controller.v" in library work
+ERROR:HDLCompilers:26 - "controller.v" line 30 expecting ';', found '='
+Module <controller> compiled
+Analysis of file <"controller.prj"> failed.
+--> 
+
+Total memory usage is 266456 kilobytes
+
+Number of errors   :    1 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

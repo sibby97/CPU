@@ -1,0 +1,716 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: datapath.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "datapath.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "datapath"
+Output Format                      : NGC
+Target Device                      : xc3s400-4-pq208
+
+---- Source Options
+Top Module Name                    : datapath
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "datapath.v" in library work
+Module <datapath> compiled
+Module <reg_16bit> compiled
+Module <reg_16bit_mdr> compiled
+Module <reg_16bit_ir> compiled
+Module <regbank> compiled
+Module <mux_1to8> compiled
+Module <mux_8to1> compiled
+Module <mux_5to1> compiled
+Module <mux_2to1_3> compiled
+Module <mux_2to1_16> compiled
+Module <functional_unit> compiled
+Module <status_selector> compiled
+Module <flipflop> compiled
+Module <mux_16to1> compiled
+Module <status_detector> compiled
+WARNING:HDLCompilers:258 - "datapath.v" line 287 Range on redeclaration of 'out' overrides range on output declaration at "datapath.v" line 286 
+No errors in compilation
+Analysis of file <"datapath.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <datapath> in library <work>.
+
+Analyzing hierarchy for module <reg_16bit> in library <work>.
+
+Analyzing hierarchy for module <reg_16bit_mdr> in library <work>.
+
+Analyzing hierarchy for module <reg_16bit_ir> in library <work>.
+
+Analyzing hierarchy for module <regbank> in library <work>.
+
+Analyzing hierarchy for module <mux_2to1_3> in library <work>.
+
+Analyzing hierarchy for module <mux_2to1_16> in library <work>.
+
+Analyzing hierarchy for module <mux_5to1> in library <work>.
+
+Analyzing hierarchy for module <functional_unit> in library <work>.
+
+Analyzing hierarchy for module <status_selector> in library <work>.
+
+Analyzing hierarchy for module <status_detector> in library <work>.
+
+Analyzing hierarchy for module <mux_1to8> in library <work>.
+
+Analyzing hierarchy for module <reg_16bit> in library <work>.
+
+Analyzing hierarchy for module <reg_16bit> in library <work>.
+
+Analyzing hierarchy for module <reg_16bit> in library <work>.
+
+Analyzing hierarchy for module <reg_16bit> in library <work>.
+
+Analyzing hierarchy for module <reg_16bit> in library <work>.
+
+Analyzing hierarchy for module <reg_16bit> in library <work>.
+
+Analyzing hierarchy for module <reg_16bit> in library <work>.
+
+Analyzing hierarchy for module <reg_16bit> in library <work>.
+
+Analyzing hierarchy for module <mux_8to1> in library <work>.
+
+Analyzing hierarchy for module <flipflop> in library <work>.
+
+Analyzing hierarchy for module <mux_16to1> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <datapath>.
+Module <datapath> is correct for synthesis.
+ 
+Analyzing module <reg_16bit> in library <work>.
+Module <reg_16bit> is correct for synthesis.
+ 
+Analyzing module <reg_16bit_mdr> in library <work>.
+Module <reg_16bit_mdr> is correct for synthesis.
+ 
+Analyzing module <reg_16bit_ir> in library <work>.
+Module <reg_16bit_ir> is correct for synthesis.
+ 
+Analyzing module <regbank> in library <work>.
+Module <regbank> is correct for synthesis.
+ 
+Analyzing module <mux_1to8> in library <work>.
+Module <mux_1to8> is correct for synthesis.
+ 
+Analyzing module <mux_8to1> in library <work>.
+WARNING:Xst:905 - "datapath.v" line 194: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <sel>
+Module <mux_8to1> is correct for synthesis.
+ 
+Analyzing module <mux_2to1_3> in library <work>.
+Module <mux_2to1_3> is correct for synthesis.
+ 
+Analyzing module <mux_2to1_16> in library <work>.
+Module <mux_2to1_16> is correct for synthesis.
+ 
+Analyzing module <mux_5to1> in library <work>.
+WARNING:Xst:905 - "datapath.v" line 238: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <sel1>, <sel2>, <sel3>, <sel4>, <sel5>
+Module <mux_5to1> is correct for synthesis.
+ 
+Analyzing module <functional_unit> in library <work>.
+Module <functional_unit> is correct for synthesis.
+ 
+Analyzing module <status_selector> in library <work>.
+Module <status_selector> is correct for synthesis.
+ 
+Analyzing module <flipflop> in library <work>.
+Module <flipflop> is correct for synthesis.
+ 
+Analyzing module <mux_16to1> in library <work>.
+WARNING:Xst:905 - "datapath.v" line 429: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <sel>
+Module <mux_16to1> is correct for synthesis.
+ 
+Analyzing module <status_detector> in library <work>.
+Module <status_detector> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+INFO:Xst:2679 - Register <i> in unit <functional_unit> has a constant value of 10000 during circuit operation. The register is replaced by logic.
+
+Synthesizing Unit <reg_16bit>.
+    Related source file is "datapath.v".
+    Found 16-bit register for signal <out>.
+    Found 16-bit register for signal <data>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <reg_16bit> synthesized.
+
+
+Synthesizing Unit <reg_16bit_mdr>.
+    Related source file is "datapath.v".
+WARNING:Xst:647 - Input <in<15:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 16-bit register for signal <out1>.
+    Found 1-bit register for signal <data>.
+    Summary:
+	inferred  17 D-type flip-flop(s).
+Unit <reg_16bit_mdr> synthesized.
+
+
+Synthesizing Unit <reg_16bit_ir>.
+    Related source file is "datapath.v".
+    Found 4-bit register for signal <ir1>.
+    Found 3-bit register for signal <ir2>.
+    Found 3-bit register for signal <ir3>.
+    Found 12-bit register for signal <ir4>.
+    Found 16-bit register for signal <data>.
+    Summary:
+	inferred  38 D-type flip-flop(s).
+Unit <reg_16bit_ir> synthesized.
+
+
+Synthesizing Unit <mux_2to1_3>.
+    Related source file is "datapath.v".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <mux_2to1_3> synthesized.
+
+
+Synthesizing Unit <mux_2to1_16>.
+    Related source file is "datapath.v".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <in1<15:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <in2<15:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <mux_2to1_16> synthesized.
+
+
+Synthesizing Unit <mux_5to1>.
+    Related source file is "datapath.v".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:737 - Found 16-bit latch for signal <out>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+Unit <mux_5to1> synthesized.
+
+
+Synthesizing Unit <functional_unit>.
+    Related source file is "datapath.v".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:737 - Found 1-bit latch for signal <c>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 16-bit 8-to-1 multiplexer for signal <z>.
+    Found 16-bit addsub for signal <z$addsub0000>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  16 Multiplexer(s).
+Unit <functional_unit> synthesized.
+
+
+Synthesizing Unit <status_detector>.
+    Related source file is "datapath.v".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit xor2 for signal <vout>.
+Unit <status_detector> synthesized.
+
+
+Synthesizing Unit <mux_1to8>.
+    Related source file is "datapath.v".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <mux_1to8> synthesized.
+
+
+Synthesizing Unit <mux_8to1>.
+    Related source file is "datapath.v".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 16-bit 8-to-1 multiplexer for signal <out>.
+    Summary:
+	inferred  16 Multiplexer(s).
+Unit <mux_8to1> synthesized.
+
+
+Synthesizing Unit <flipflop>.
+    Related source file is "datapath.v".
+WARNING:Xst:1305 - Output <q> is never assigned. Tied to value 0.
+WARNING:Xst:646 - Signal <data> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <flipflop> synthesized.
+
+
+Synthesizing Unit <mux_16to1>.
+    Related source file is "datapath.v".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:737 - Found 1-bit latch for signal <out>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 1-bit 9-to-1 multiplexer for signal <out$mux0000>.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <mux_16to1> synthesized.
+
+
+Synthesizing Unit <regbank>.
+    Related source file is "datapath.v".
+WARNING:Xst:647 - Input <rd> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <wr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <t8> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <t7> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <t6> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <t5> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <t4> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <t3> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <t2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <t1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+Unit <regbank> synthesized.
+
+
+Synthesizing Unit <status_selector>.
+    Related source file is "datapath.v".
+Unit <status_selector> synthesized.
+
+
+Synthesizing Unit <datapath>.
+    Related source file is "datapath.v".
+WARNING:Xst:647 - Input <memrd> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <memwr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <ir3<15:3>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <datapath> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 16-bit addsub                                         : 1
+# Registers                                            : 31
+ 1-bit register                                        : 1
+ 12-bit register                                       : 1
+ 16-bit register                                       : 26
+ 3-bit register                                        : 2
+ 4-bit register                                        : 1
+# Latches                                              : 3
+ 1-bit latch                                           : 2
+ 16-bit latch                                          : 1
+# Multiplexers                                         : 3
+ 1-bit 9-to-1 multiplexer                              : 1
+ 16-bit 8-to-1 multiplexer                             : 2
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1290 - Hierarchical block <sd> is unconnected in block <datapath>.
+   It will be removed from the design.
+INFO:Xst:2261 - The FF/Latch <out1_1> in Unit <mdr> is equivalent to the following 14 FFs/Latches, which will be removed : <out1_2> <out1_3> <out1_4> <out1_5> <out1_6> <out1_7> <out1_8> <out1_9> <out1_10> <out1_11> <out1_12> <out1_13> <out1_14> <out1_15> 
+INFO:Xst:2261 - The FF/Latch <ir2_1> in Unit <ir> is equivalent to the following FF/Latch, which will be removed : <ir4_10> 
+INFO:Xst:2261 - The FF/Latch <ir2_2> in Unit <ir> is equivalent to the following FF/Latch, which will be removed : <ir4_11> 
+INFO:Xst:2261 - The FF/Latch <ir3_0> in Unit <ir> is equivalent to the following FF/Latch, which will be removed : <ir4_6> 
+INFO:Xst:2261 - The FF/Latch <ir3_1> in Unit <ir> is equivalent to the following FF/Latch, which will be removed : <ir4_7> 
+INFO:Xst:2261 - The FF/Latch <ir3_2> in Unit <ir> is equivalent to the following FF/Latch, which will be removed : <ir4_8> 
+INFO:Xst:2261 - The FF/Latch <ir2_0> in Unit <ir> is equivalent to the following FF/Latch, which will be removed : <ir4_9> 
+WARNING:Xst:1710 - FF/Latch <out1_1> (without init value) has a constant value of 0 in block <mdr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2404 -  FFs/Latches <out1<15:1>> (without init value) have a constant value of 0 in block <reg_16bit_mdr>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 16-bit addsub                                         : 1
+# Registers                                            : 424
+ Flip-Flops                                            : 424
+# Latches                                              : 3
+ 1-bit latch                                           : 2
+ 16-bit latch                                          : 1
+# Multiplexers                                         : 3
+ 1-bit 9-to-1 multiplexer                              : 1
+ 16-bit 8-to-1 multiplexer                             : 2
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <ir2_1> in Unit <reg_16bit_ir> is equivalent to the following FF/Latch, which will be removed : <ir4_10> 
+INFO:Xst:2261 - The FF/Latch <ir2_2> in Unit <reg_16bit_ir> is equivalent to the following FF/Latch, which will be removed : <ir4_11> 
+INFO:Xst:2261 - The FF/Latch <ir3_0> in Unit <reg_16bit_ir> is equivalent to the following FF/Latch, which will be removed : <ir4_6> 
+INFO:Xst:2261 - The FF/Latch <ir3_1> in Unit <reg_16bit_ir> is equivalent to the following FF/Latch, which will be removed : <ir4_7> 
+INFO:Xst:2261 - The FF/Latch <ir3_2> in Unit <reg_16bit_ir> is equivalent to the following FF/Latch, which will be removed : <ir4_8> 
+INFO:Xst:2261 - The FF/Latch <ir2_0> in Unit <reg_16bit_ir> is equivalent to the following FF/Latch, which will be removed : <ir4_9> 
+
+Optimizing unit <datapath> ...
+WARNING:Xst:1294 - Latch <ss/cc/out> is equivalent to a wire in block <datapath>.
+
+Optimizing unit <reg_16bit> ...
+
+Optimizing unit <reg_16bit_ir> ...
+
+Optimizing unit <functional_unit> ...
+
+Optimizing unit <mux_5to1> ...
+
+Optimizing unit <regbank> ...
+WARNING:Xst:2677 - Node <alu/c> of sequential type is unconnected in block <datapath>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block datapath, actual ratio is 8.
+FlipFlop ir/ir2_0 has been replicated 2 time(s)
+FlipFlop ir/ir2_2 has been replicated 2 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 422
+ Flip-Flops                                            : 422
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : datapath.ngr
+Top Level Output File Name         : datapath
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 77
+
+Cell Usage :
+# BELS                             : 362
+#      GND                         : 1
+#      INV                         : 1
+#      LUT2                        : 39
+#      LUT3                        : 108
+#      LUT3_D                      : 5
+#      LUT4                        : 105
+#      MUXCY                       : 15
+#      MUXF5                       : 55
+#      MUXF6                       : 16
+#      VCC                         : 1
+#      XORCY                       : 16
+# FlipFlops/Latches                : 438
+#      FDE                         : 422
+#      LDCP                        : 16
+# Clock Buffers                    : 2
+#      BUFGP                       : 2
+# IO Buffers                       : 72
+#      IBUF                        : 32
+#      OBUF                        : 40
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s400pq208-4 
+
+ Number of Slices:                      320  out of   3584     8%  
+ Number of Slice Flip Flops:            438  out of   7168     6%  
+ Number of 4 input LUTs:                258  out of   7168     3%  
+ Number of IOs:                          77
+ Number of bonded IOBs:                  74  out of    141    52%  
+ Number of GCLKs:                         2  out of      8    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 422   |
+rd                                 | BUFGP                  | 16    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+------------------------------------------------+------------------------+-------+
+Control Signal                                  | Buffer(FF name)        | Load  |
+------------------------------------------------+------------------------+-------+
+mm41/out_0__and0000(mm41/out_0__and00001:O)     | NONE(mm41/out_0)       | 1     |
+mm41/out_0__and0001(mm41/out_0__and00011:O)     | NONE(mm41/out_0)       | 1     |
+mm41/out_10__and0000(mm41/out_10__and00001:O)   | NONE(mm41/out_10)      | 1     |
+mm41/out_10__and0001(mm41/out_10__and00011:O)   | NONE(mm41/out_10)      | 1     |
+mm41/out_11__and0000(mm41/out_11__and00001:O)   | NONE(mm41/out_11)      | 1     |
+mm41/out_11__and0001(mm41/out_11__and00011:O)   | NONE(mm41/out_11)      | 1     |
+mm41/out_12__and0000(mm41/out_12__and00001:O)   | NONE(mm41/out_12)      | 1     |
+mm41/out_12__and0001(mm41/out_mux0000<12>_SW2:O)| NONE(mm41/out_12)      | 1     |
+mm41/out_13__and0000(mm41/out_13__and00001:O)   | NONE(mm41/out_13)      | 1     |
+mm41/out_13__and0001(mm41/out_mux0000<13>_SW2:O)| NONE(mm41/out_13)      | 1     |
+mm41/out_14__and0000(mm41/out_14__and00001:O)   | NONE(mm41/out_14)      | 1     |
+mm41/out_14__and0001(mm41/out_mux0000<14>_SW2:O)| NONE(mm41/out_14)      | 1     |
+mm41/out_15__and0000(mm41/out_15__and00001:O)   | NONE(mm41/out_15)      | 1     |
+mm41/out_15__and0001(mm41/out_mux0000<15>_SW2:O)| NONE(mm41/out_15)      | 1     |
+mm41/out_1__and0000(mm41/out_1__and00001:O)     | NONE(mm41/out_1)       | 1     |
+mm41/out_1__and0001(mm41/out_1__and00011:O)     | NONE(mm41/out_1)       | 1     |
+mm41/out_2__and0000(mm41/out_2__and00001:O)     | NONE(mm41/out_2)       | 1     |
+mm41/out_2__and0001(mm41/out_2__and00011:O)     | NONE(mm41/out_2)       | 1     |
+mm41/out_3__and0000(mm41/out_3__and00001:O)     | NONE(mm41/out_3)       | 1     |
+mm41/out_3__and0001(mm41/out_3__and00011:O)     | NONE(mm41/out_3)       | 1     |
+mm41/out_4__and0000(mm41/out_4__and00001:O)     | NONE(mm41/out_4)       | 1     |
+mm41/out_4__and0001(mm41/out_4__and00011:O)     | NONE(mm41/out_4)       | 1     |
+mm41/out_5__and0000(mm41/out_5__and00001:O)     | NONE(mm41/out_5)       | 1     |
+mm41/out_5__and0001(mm41/out_5__and00011:O)     | NONE(mm41/out_5)       | 1     |
+mm41/out_6__and0000(mm41/out_6__and00001:O)     | NONE(mm41/out_6)       | 1     |
+mm41/out_6__and0001(mm41/out_6__and00011:O)     | NONE(mm41/out_6)       | 1     |
+mm41/out_7__and0000(mm41/out_7__and00001:O)     | NONE(mm41/out_7)       | 1     |
+mm41/out_7__and0001(mm41/out_7__and00011:O)     | NONE(mm41/out_7)       | 1     |
+mm41/out_8__and0000(mm41/out_8__and00001:O)     | NONE(mm41/out_8)       | 1     |
+mm41/out_8__and0001(mm41/out_8__and00011:O)     | NONE(mm41/out_8)       | 1     |
+mm41/out_9__and0000(mm41/out_9__and00001:O)     | NONE(mm41/out_9)       | 1     |
+mm41/out_9__and0001(mm41/out_9__and00011:O)     | NONE(mm41/out_9)       | 1     |
+------------------------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 9.434ns (Maximum Frequency: 106.000MHz)
+   Minimum input arrival time before clock: 10.864ns
+   Maximum output required time after clock: 9.552ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 9.434ns (frequency: 106.000MHz)
+  Total number of paths / destination ports: 18798 / 518
+-------------------------------------------------------------------------
+Delay:               9.434ns (Levels of Logic = 6)
+  Source:            ir/ir2_2_1 (FF)
+  Destination:       mdr/data (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: ir/ir2_2_1 to mdr/data
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.720   0.869  ir/ir2_2_1 (ir/ir2_2_1)
+     LUT3_D:I2->O         15   0.551   1.383  mux1/out<2>1 (m1_out<2>)
+     LUT4:I1->O            1   0.551   0.827  alu/z_mux0000<0>11 (alu/z_mux0000<0>)
+     LUT4:I3->O            1   0.551   0.000  alu/Maddsub_z_addsub0000_lut<0> (alu/Maddsub_z_addsub0000_lut<0>)
+     XORCY:LI->O           1   0.622   0.869  alu/Maddsub_z_addsub0000_xor<0> (alu/z_addsub0000<0>)
+     LUT3:I2->O           12   0.551   1.186  alu/Mmux_z_2_f5 (zbus<0>)
+     LUT3:I2->O            1   0.551   0.000  mux2/out<0>1 (m2_out)
+     FDE:D                     0.203          mdr/data
+    ----------------------------------------
+    Total                      9.434ns (4.300ns logic, 5.134ns route)
+                                       (45.6% logic, 54.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 25634 / 343
+-------------------------------------------------------------------------
+Offset:              10.864ns (Levels of Logic = 7)
+  Source:            m1 (PAD)
+  Destination:       mdr/data (FF)
+  Destination Clock: clk rising
+
+  Data Path: m1 to mdr/data
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            33   0.821   2.198  m1_IBUF (m1_IBUF)
+     LUT3_D:I0->O         15   0.551   1.383  mux1/out<2>1 (m1_out<2>)
+     LUT4:I1->O            1   0.551   0.827  alu/z_mux0000<0>11 (alu/z_mux0000<0>)
+     LUT4:I3->O            1   0.551   0.000  alu/Maddsub_z_addsub0000_lut<0> (alu/Maddsub_z_addsub0000_lut<0>)
+     XORCY:LI->O           1   0.622   0.869  alu/Maddsub_z_addsub0000_xor<0> (alu/z_addsub0000<0>)
+     LUT3:I2->O           12   0.551   1.186  alu/Mmux_z_2_f5 (zbus<0>)
+     LUT3:I2->O            1   0.551   0.000  mux2/out<0>1 (m2_out)
+     FDE:D                     0.203          mdr/data
+    ----------------------------------------
+    Total                     10.864ns (4.401ns logic, 6.463ns route)
+                                       (40.5% logic, 59.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'rd'
+  Total number of paths / destination ports: 84 / 16
+-------------------------------------------------------------------------
+Offset:              6.846ns (Levels of Logic = 4)
+  Source:            tir (PAD)
+  Destination:       mm41/out_0 (LATCH)
+  Destination Clock: rd falling
+
+  Data Path: tir to mm41/out_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            33   0.821   2.198  tir_IBUF (tir_IBUF)
+     LUT4:I0->O            1   0.551   0.869  mm41/out_mux0000<0>40_SW0 (N167)
+     LUT4:I2->O            3   0.551   1.102  mm41/out_mux0000<0>40 (mm41/out_mux0000<0>40)
+     LUT3:I1->O            1   0.551   0.000  mm41/out_mux0000<0>66 (mm41/out_mux0000<0>)
+     LDCP:D                    0.203          mm41/out_0
+    ----------------------------------------
+    Total                      6.846ns (2.677ns logic, 4.169ns route)
+                                       (39.1% logic, 60.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 25 / 25
+-------------------------------------------------------------------------
+Offset:              9.552ns (Levels of Logic = 2)
+  Source:            ir/ir2_0 (FF)
+  Destination:       dcond (PAD)
+  Source Clock:      clk rising
+
+  Data Path: ir/ir2_0 to dcond
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             29   0.720   1.836  ir/ir2_0 (ir/ir2_0)
+     INV:I->O              1   0.551   0.801  ss/cc/out_mux0000_inv1_INV_0 (dcond_OBUF)
+     OBUF:I->O                 5.644          dcond_OBUF (dcond)
+    ----------------------------------------
+    Total                      9.552ns (6.915ns logic, 2.637ns route)
+                                       (72.4% logic, 27.6% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.76 secs
+ 
+--> 
+
+Total memory usage is 298292 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   45 (   0 filtered)
+Number of infos    :   17 (   0 filtered)
+
